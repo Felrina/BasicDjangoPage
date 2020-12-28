@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django, the guitarist</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>  
+    <h1>This is the picture of django himself</h1>
+    <!-- {{ insert_me }} -->
+    <img src="{% static 'images/imagereference.jpg' %}" alt="Oops! didn't show">
+</body>
+</html>
