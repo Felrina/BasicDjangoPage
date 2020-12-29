@@ -9,7 +9,28 @@
 </head>
 <body>  
     <h1>This is the picture of django himself</h1>
-    {{ insert_me }} 
+    <!-- {{ insert_me }}  -->
+    <h2>Here are your acesss records</h2>
+
+    <div class='acesss_records'>
+        {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Acessed</th>
+                </thead>
+
+                {% for record in access_records %}
+                <tr>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <p>NO ACCESS RECORD FOUND</p>
+            {% endif %}
+    </div>
     <p><img src="{% static 'images/imagereference.jpg' %}" alt="Oops! didn't show"></p>
     
 </body>
